@@ -1,0 +1,130 @@
+---
+title: "Predictive Analysis RWS"
+author: "Project Group"
+date: "24/11/2022"
+output:
+  rmdformats::downcute:
+    toc_depth: 3
+    highlight: "tango"
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+```
+
+## **Domain Understanding**
+
+For our project with JUGO, we have been given the task to create a model calculating the best time for their employees to travel and meet with their clients. Based on this, we have created a Domain Understanding report which assesses the different topics related to traffic in order to understand the problem better. We have documented our research and thought process starting from the brainstorming session and up until he results of our investigation.
+
+### **Brainstorming Session**
+
+To get a broader understanding of the domain we would be diving into for our group project, we decided to make a mind map. In this mind map, we would outline the different areas that would have an impact on our project. It consists of different topics that would be related to our research questions and would also be beneficial to know about when making the actual predictions in the later phases of the project. The main topics we touched on were: traffic itself and what causes it, why this model would be beneficial and the solutions that already exists for this problem.
+
+### **Data Sourcing**
+
+### **Enriching Data**
+
+* ***Does the dataset need to be further enriched?***
+
+### **Analytical Approach**
+
+*Write*
+
+### **Nature of The Problem**
+
+*Write*
+
+### **Target Variable**
+
+*Write*
+
+### **Correlation**
+
+*Write*
+
+## **Data Provisioning**
+
+*Write Intro*
+
+### **Data Requirements**
+
+### **Load Libraries & Packages**
+
+```{python}
+import sklearn as sk
+import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+from typing import Dict
+from pathlib import Path
+from tqdm.notebook import tqdm
+```
+
+### **Data Importation**
+
+```{python}
+df = pd.read_csv("Rijkswaterstaat.csv")
+df
+```
+
+### **Data Collection**
+
+```{python}
+df.sample(5)
+```
+
+### **Data Understanding**
+
+* ***We will analyse all the columns names and the related data types.***
+
+```{python}
+df.info()
+```
+
+* ***We will analyse all the columns names and the related data types.***
+```{python}
+df.describe()
+```
+
+### **Data Preparation**
+
+```{python}
+
+```
+
+## **Data Visualization**
+
+```{python}
+df.corr()
+```
+
+* ***We visualize to determine certain trends with the help of graphical illustration heatmap.***
+
+```{python}
+heatmap = sns.heatmap(df.corr(), vmin=-1, vmax=1, annot=True)
+heatmap
+```
+
+* ***We will further explore our dataset by summarizing all of the variables in a single figure to determine what kind of modelling will be utilized. ***
+
+```{python}
+sns.pairplot(df)
+```
+
+## **Prediction**
+
+*Write Intro...*
+
+### **Preprocessing**
+
+*Write*
+
+### **Modelling**
+
+*Write*
+
+### **Evaluation**
+
+*Write*
